@@ -9,14 +9,18 @@ class AddItem extends React.Component {
       productPrice: 0,
     };
   }
+
+ 
   render() {
     return (
       <form
-        className="row mb-5"
+        className="form-flex"
+      
         onSubmit={(e) => {
           e.preventDefault();
           this.props.addItem(this.state.productName,Number(this.state.productPrice));
         }}
+        
       >
         <div className="mb-3 col-4">
           <label htmlFor="inputName" className="form-label">
@@ -49,7 +53,8 @@ class AddItem extends React.Component {
             value={this.state.productPrice}
           />
         </div>
-        <button type="submit" className="btn btn-primary col-4">
+        <button type="submit" className="btn btn-primary col-2  mt-3">
+          
           Add
         </button>
       </form>
@@ -58,3 +63,4 @@ class AddItem extends React.Component {
 }
 
 export default AddItem;
+

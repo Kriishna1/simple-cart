@@ -4,8 +4,13 @@ export default function Product(props) {
   return (
     <div className="row mt-3">
       <div className="col-5">
-        <h2>
+        <h2   className="h2-flex">
+          <div className="badge bg-primary">         
           {props.product.name}
+
+        </div>
+
+ 
           <span className="badge bg-secondary">₹{props.product.price}</span>
         </h2>
       </div>
